@@ -1,3 +1,3 @@
 module.exports = {
-    mongoURI: 'mongodb://127.0.0.1:27017/quickstarter-mongo'
+  mongoURI: "mongodb://localhost:27017/quickstarter-mongo"
 };

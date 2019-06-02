@@ -2,6 +2,7 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
+const users = require("./routes/api/users");
 
 const app = express();
 
@@ -15,6 +16,8 @@ mongoose
   .catch(err => console.log(err));
 
 app.get("/", (req, res) => res.send("Hello world!"));
+// use Routes
+app.use("/api/users", users);
 
 const port = process.env.PORT || 8082;
 
