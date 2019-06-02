@@ -6,13 +6,13 @@ services:
     restart: always
     build: .
     ports:
-      - "80:8082"
+      - "8082:8082"
     links:
-      - mongo
-    depends_on:
       - mongo
   mongo:
     container_name: quickstarter-mongo
     image: mongo
+    volumes:
+      - ./data:/data/db
     ports:
       - "27017:27017"
